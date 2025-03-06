@@ -33,8 +33,22 @@ fetch('https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/JCQ
     const df = new DataFrame(rows);
 
     df.show()
-
   })
+
+function submitGraph() {
+
+    let sector = document.getElementById('sector').value;
+    let statistic = document.getElementById('statistic').value;
+
+    if (document.getElementById("useEconomicIndicator").checked) {
+        let economicIndicator = document.getElementById('economicIndicator').value;
+    } else {
+
+    }
+}
+
+
+
 
 
 

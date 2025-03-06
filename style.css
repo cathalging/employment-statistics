@@ -15,7 +15,10 @@ body {
     margin: 0;
     padding: 10px 0 0;
     text-align: center;
-
+    a  {
+        text-decoration: none;
+        color: #E8EDDF;
+    }
 
 }
 
@@ -25,6 +28,7 @@ body {
     font-weight: bold;
     text-align: center;
     margin-top: 30px;
+    box-shadow: 5px 5px 5px #242423;
 
 }
 
@@ -32,8 +36,8 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
 
@@ -76,4 +80,91 @@ body {
     margin: 10px;
     width: 80%;
     padding: 30px;
+}
+
+.graphArea {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    padding: 10px;
+}
+
+.graphBox {
+    border: #F5CB5C 10px solid;
+    min-height: 100%;
+    min-width: 40%;
+    box-shadow: 5px 5px 5px #242423;
+}
+
+.graphOptions {
+    display: grid;
+    padding: 20px;
+    font-weight: bold;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    select {
+        background-color: #242423;
+        border: 1px solid #E8EDDF;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 5px 5px 5px #242423;
+        color: #E8EDDF;
+        width: 100%;
+    }
+
+    .checkbox-container {
+        display: flex; /* Ensures checkbox aligns properly */
+        align-items: center;
+        position: relative;
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #F5CB5C;
+        border: 2px solid #333533;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: #F5CB5C;
+        border-color: #333533;
+    }
+    input[type="checkbox"]:checked::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #242423;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 2px;
+    }
+
+    button {
+        background-color: #F5CB5C;
+        border: 1px solid #E8EDDF;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 5px 5px 5px #242423;
+        color: #242423;
+        font-weight: bold;
+
+    }
 }
