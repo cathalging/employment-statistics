@@ -1,5 +1,6 @@
 const { DataFrame } = dfjs;
 
+let df
 // Fetch the jobchurn and convert to json
 fetch('https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/JCQ01/JSON-stat/2.0/en')
   .then(response => response.json())
@@ -30,25 +31,61 @@ fetch('https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/JCQ
     }
 
     // Create dataframe of jobchurn json
-    const df = new DataFrame(rows);
+      df = new DataFrame(rows);
 
-    df.show()
   })
 
-function submitGraph() {
 
-    let sector = document.getElementById('sector').value;
-    let statistic = document.getElementById('statistic').value;
 
-    if (document.getElementById("useEconomicIndicator").checked) {
-        let economicIndicator = document.getElementById('economicIndicator').value;
-    } else {
-
+function getStatTable(statWanted) {
+    df.sql.register("tmp")
+    switch(statWanted) {
+        case "hirings":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Hirings'")
+        case "jobChurn":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Job Churn'")
+        case "jobChurnRate":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Job Churn Rate'")
+        case "jobCreation":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Job Creation'")
+        case "jobDestruction":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Job Destruction'")
+        case "separations":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Separations'")
+        case "stayers":
+            return DataFrame.sql.request("SELECT * FROM tmp WHERE Statistic = 'Stayers'")
     }
 }
 
+function submitGraph() {
+    let sector = document.getElementById('sectors').value;  // Correct ID here
+    let statistic = document.getElementById('statistic').value;
+    let economicIndicator
 
+    if (document.getElementById("useEconomicIndicator").checked) {
+        economicIndicator = document.getElementById('economicIndicator').value;
+    }
+    else {
+        economicIndicator = null
+    }
+    getGraphValues(sector, statistic, economicIndicator);
+}
 
+let values
 
+function getGraphValues(sector, statistic, economicIndicator) {
+    let statTable = getStatTable(statistic);
+
+    // Column index for sector and value
+    let sectorIndex = 2;
+    let valueIndex = 3;
+
+    // Get rid of unwanted sectors
+    let filteredTable = statTable.toArray().filter(row => row[sectorIndex] === sector);
+
+    // Get values from the filtered table
+    values = filteredTable.map(row => row[valueIndex]);
+
+}
 
 

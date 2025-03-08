@@ -121,10 +121,11 @@ body {
         box-shadow: 5px 5px 5px #242423;
         color: #E8EDDF;
         width: 100%;
+        cursor: pointer;
     }
 
     .checkbox-container {
-        display: flex; /* Ensures checkbox aligns properly */
+        display: flex;
         align-items: center;
         position: relative;
     }
@@ -165,6 +166,10 @@ body {
         box-shadow: 5px 5px 5px #242423;
         color: #242423;
         font-weight: bold;
+        cursor: pointer;
+    }
 
+    button:active {
+        background-color: #fdc430;
     }
 }

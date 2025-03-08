@@ -28,7 +28,7 @@
         <div class="graphOptions">
             <div>
                 <label for="sectors">Sector:</label>
-                <select name="sectors" id="sectors">
+                <select id="sectors">
                     <option value="All NACE economic sectors">All NACE economic sectors</option>
                     <option value="Agriculture, forestry and fishing (A)">Agriculture, forestry and fishing</option>
                     <option value="Industry (B to E)">Industry</option>
@@ -50,14 +50,14 @@
 
             <div>
                 <label for="statistic">Statistic:</label>
-                <select name="statistic" id="statistic">
-                    <option value="Hirings">Hirings</option>
-                    <option value="Stayers">Stayers</option>
-                    <option value="Separations">Separations</option>
-                    <option value="Job Creation">Job Creation</option>
-                    <option value="Job Destruction">Job Destruction</option>
-                    <option value="Job Churn">Job Churn</option>
-                    <option value="Job Churn Rate">Job Churn Rate</option>
+                <select id="statistic">
+                    <option value="hirings">Hirings</option>
+                    <option value="stayers">Stayers</option>
+                    <option value="separations">Separations</option>
+                    <option value="jobCreation">Job Creation</option>
+                    <option value="jobDestruction">Job Destruction</option>
+                    <option value="jobChurn">Job Churn</option>
+                    <option value="jobChurnRate">Job Churn Rate</option>
 
                 </select>
             </div>
@@ -67,7 +67,7 @@
                     <label for="useEconomicIndicator">Economic Indicator: </label>
                     <input id="useEconomicIndicator" type="checkbox" checked="checked">
                 </span>
-                <select name="economicIndicator" id="economicIndicator">
+                <select id="economicIndicator">
                     <option value="GDP">GDP</option>
                     <option value="jobVacancies">Job Vacancies</option>
                 </select>
