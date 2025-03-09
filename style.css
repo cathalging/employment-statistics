@@ -89,11 +89,14 @@ body {
 }
 
 .graphBox {
-    border: #F5CB5C 10px solid;
-    min-height: 100%;
-    min-width: 40%;
+    display: block;           /* Ensures the canvas is treated as a block element */
+    width: 100%;              /* Forces the canvas to fill its grid cell */
+    box-sizing: border-box;   /* Includes the border in the width calculation */
+    border: 10px solid #F5CB5C;
     box-shadow: 5px 5px 5px #242423;
 }
+
+
 
 .graphOptions {
     display: grid;
@@ -172,4 +175,4 @@ body {
     button:active {
         background-color: #fdc430;
     }
-}
+}  

@@ -5,6 +5,7 @@
     <title>Employment Statistics</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="data.js"></script>
 </head>
 <body>
@@ -24,7 +25,7 @@
     </div>
 
     <div class="graphArea">
-        <div class="graphBox" id="graphBox"></div>
+        <canvas class="graphBox" id="graphBox"></canvas>
         <div class="graphOptions">
             <div>
                 <label for="sectors">Sector:</label>
