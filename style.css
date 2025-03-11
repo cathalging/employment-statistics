@@ -97,6 +97,16 @@ body {
 }
 
 
+select {
+    background-color: #242423;
+    border: 1px solid #E8EDDF;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #242423;
+    color: #E8EDDF;
+    width: 100%;
+    cursor: pointer;
+}
 
 .graphOptions {
     display: grid;
@@ -116,16 +126,7 @@ body {
         gap: 10px;
     }
 
-    select {
-        background-color: #242423;
-        border: 1px solid #E8EDDF;
-        border-radius: 5px;
-        padding: 10px;
-        box-shadow: 5px 5px 5px #242423;
-        color: #E8EDDF;
-        width: 100%;
-        cursor: pointer;
-    }
+
 
     .checkbox-container {
         display: flex;
@@ -161,18 +162,48 @@ body {
         border-radius: 2px;
     }
 
-    button {
-        background-color: #F5CB5C;
-        border: 1px solid #E8EDDF;
-        border-radius: 5px;
-        padding: 10px;
-        box-shadow: 5px 5px 5px #242423;
-        color: #242423;
-        font-weight: bold;
-        cursor: pointer;
+
+}
+button {
+    background-color: #F5CB5C;
+    border: 1px solid #E8EDDF;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #242423;
+    color: #242423;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #fdc430;
+}
+
+.survey {
+    background-color: #242423;
+    color: #E8EDDF;
+    font-weight: bold;
+    border: 5px solid #F5CB5C;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #242423;
+    margin: 3% 8% 0 8%;
+    display: grid;
+
+    label {
+        margin: 10px;
     }
 
-    button:active {
-        background-color: #fdc430;
+    h1 {
+        text-align: center;
     }
-}  
+
+    .ul {
+        font-weight: normal;
+        padding: 20px;
+
+    }
+
+
+}
+

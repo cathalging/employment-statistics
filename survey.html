@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="survey.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <a href="index.html"><h1>Employment Statistics</h1></a>
+    <div>Insights and trends to guide your career decisions</div>
+
+    <div class="nav">
+        <ul>
+            <li><a href="findings.html">Findings</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a>Recommendations</a></li>
+            <li><a href="survey.html">Survey</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="survey">
+
+    <h1>Survey</h1>
+    What month did you last change jobs?
+    <label>
+        <select id="month" class="select" required>
+            <option disabled selected>Select an option</option>
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+        </select>
+    </label>
+
+    How many months have you had your current job?
+    <label>
+        <input type="number" id="monthsWorked" required>
+    </label>
+
+    Have you found this website helpful?
+    <div>
+        <label>
+            Yes
+            <input type="radio" id="yes" name="feedback" value=true required>
+        </label>
+        <label>
+            No
+            <input type="radio" id="no" name="feedback" value=false required>
+        </label>
+    </div>
+
+    <button type="button" id="submitButton">Submit</button>
+</div>
+
+</body>
+</html>

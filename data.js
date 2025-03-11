@@ -230,6 +230,7 @@ function drawChart(values, jobVacancies, gdp) {
             // Fixes graph resizing issue
             responsive: false,
             maintainAspectRatio: false,
+            devicePixelRatio: 4,
             interaction: {
                 mode: 'nearest',
                 intersect: false
