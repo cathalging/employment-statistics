@@ -89,11 +89,12 @@ body {
 }
 
 .graphBox {
-    display: block;           /* Ensures the canvas is treated as a block element */
-    width: 100%;              /* Forces the canvas to fill its grid cell */
-    box-sizing: border-box;   /* Includes the border in the width calculation */
+    display: block;           /* Ensures Canvas fits into area */
+    width: 100%;
+    box-sizing: border-box;
     border: 10px solid #F5CB5C;
     box-shadow: 5px 5px 5px #242423;
+    background-color: #242423;
 }
 
 
@@ -204,6 +205,39 @@ button:active {
 
     }
 
-
 }
 
+.surveyResults {
+    background-color: #242423;
+    padding: 30px;
+
+    h1 {
+        padding-left: 6%;
+    }
+
+    .result1 {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 10%;
+        align-items: center;
+        margin: 8%;
+        canvas {
+            width: 100%;
+            border: 6px dashed #F5CB5C;
+        }
+    }
+
+    .result2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10%;
+        align-items: center;
+        margin: 8%;
+        canvas {
+            width: 100%;
+            border: 6px #F5CB5C dashed;
+        }
+    }
+
+
+}

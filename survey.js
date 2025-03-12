@@ -21,15 +21,12 @@ const database = getDatabase(app);
 document.getElementById('submitButton').addEventListener('click', submitSurvey);
 
 function submitSurvey() {
-    alert("submitSurvey function called!"); // Debugging alert
 
     // Get form values
     const month = document.getElementById('month').value;
     const monthsWorked = document.getElementById('monthsWorked').value;
     const feedbackElement = document.querySelector('input[name="feedback"]:checked');
     const feedback = feedbackElement ? feedbackElement.value : null;
-
-    alert(`Form values: Month = ${month}, Months Worked = ${monthsWorked}, Feedback = ${feedback}`); // Debugging alert
 
     if (!month || !monthsWorked || !feedback) {
         alert("Please fill out all fields.");
@@ -43,12 +40,10 @@ function submitSurvey() {
         feedback: feedback
     };
 
-    alert("Survey data: " + JSON.stringify(surveyData)); // Debugging alert
-
     // Reference the 'responses' node in the database
     const responsesRef = ref(database, 'responses');
 
-    // Push the survey data to the 'responses' node
+    // Add survey results to responses node
     push(responsesRef, surveyData)
         .then(() => {
             alert("Survey data submitted successfully!");

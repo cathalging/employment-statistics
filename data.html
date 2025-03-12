@@ -7,6 +7,7 @@
     <script src="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="data.js"></script>
+    <script src="surveyResults.js" type="module"></script>
 
 </head>
 <body>
@@ -80,8 +81,17 @@
         </div>
     </div>
 
-    <div>
+    <div class="surveyResults">
         <h1>Our Survey says...</h1>
+        <div class="result1">
+            This is a graph of the last month one of our users got a new job, outlining the most common months that people get jobs
+            <canvas id="monthsWorkedBar"></canvas>
+        </div>
+
+        <div class="result2">
+            <canvas id="feedbackDoughnut"></canvas>
+            We asked you if our service makes a difference...
+        </div>
 
     </div>
 
