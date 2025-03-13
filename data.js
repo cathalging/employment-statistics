@@ -249,9 +249,3 @@ function drawChart(values, jobVacancies, gdp) {
         }
     });
 }
-
-
-
-
-
-
