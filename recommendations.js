@@ -214,7 +214,7 @@ function returnData(market) {
                 "<li>Build financial security in case of job loss.</li>" +
                 "</ul>";
             break;
-        case "Hiring Freeze But Job Security":
+        case "Hiring Freeze but Job Security":
             recommendation = "<ul>" +
                 "<li>Hard to switch jobs, but those employed are secure.</li>" +
                 "<li>Wait for better conditions before switching.</li>" +

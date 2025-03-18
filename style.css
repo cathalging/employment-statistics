@@ -7,6 +7,8 @@ body {
     font-family: 'Verdana', sans-serif;
 
     text-size-adjust: 300%;
+
+    line-height: 1.7;
 }
 
 .header {
@@ -73,13 +75,32 @@ body {
     background-color: #333533;
     border-radius: 10px;
     padding: 20px;
+    display: grid;
+    a {
+        background-color: #F5CB5C;
+        border: 1px solid #E8EDDF;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 5px 5px 5px #242423;
+        color: #242423;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 20px;
+        text-align: center;
+    }
 
+    a:hover {
+        background-color: #fdc430;
+        text-decoration: none;
+    }
 }
 
 .content {
     margin: 10px;
     width: 80%;
     padding: 30px;
+
 }
 
 .graphArea {
@@ -207,7 +228,7 @@ button:active {
         margin: 10px;
     }
 
-    h1 {
+    h1, h3 {
         text-align: center;
     }
 
@@ -280,10 +301,6 @@ button:active {
             margin: 10px;
         }
 
-        h3 {
-            text-align: center;
-        }
-
         select {
             width: auto;
         }
@@ -306,7 +323,27 @@ button:active {
         background-color: #242423;
         padding: 10px;
         border-radius: 5px;
+        h3 {
+            text-align: center;
+        }
+    }
+}
 
+.findings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+
+    div {
+        margin: 2%;
     }
 
+    img {
+        border: 5px solid #F5CB5C;
+        box-shadow: 5px 5px 5px #242423;
+        border-radius: 5px;
+        width: 100%;
+        align-self: center;
+    }
 }

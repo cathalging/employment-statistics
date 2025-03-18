@@ -46,7 +46,8 @@ function submitSurvey() {
     // Add survey results to responses node
     push(responsesRef, surveyData)
         .then(() => {
-            alert("Survey data submitted successfully!");
+            const survey = document.getElementById('survey');
+            survey.innerHTML = "<h1>Survey Submitted</h1><h3>Thank You</h3>";
         })
         .catch((error) => {
             alert("Error submitting survey data: " + error);
