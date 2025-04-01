@@ -1,0 +1,42 @@
+List of Inputs:
+-----------------------------------------------
+
+Sectors:
+-----------------------------------------------
+All NACE economic sectors
+Not stated
+Agriculture, forestry and fishing (A)
+Industry (B to E)
+Construction (F)
+Wholesale and retail trade; repair of motor vehicles and motorcycles (G)
+Transportation and storage (H)
+Accommodation and food service activities (I)
+Information and communication (J)
+Financial, insurance and real estate activities (K, L)
+Professional, scientific and technical activities (M)
+Administrative and support service activities (N)
+Public administration and defence; compulsory social security (O)
+Education (P)
+Human health and social work activities (Q)
+Arts, entertainment, recreation and other service activities (R,S)
+Services (T, U)
+
+Statistics:
+-----------------------------------------------
+hirings
+stayers
+separations
+jobCreation
+jobDestruction
+jobChurn
+jobChurnRate
+
+
+Economic Indicators:
+-----------------------------------------------
+gdp
+jobVacancies
+
+Quarters:
+-----------------------------------------------
+2020Q2 => 2024Q3
